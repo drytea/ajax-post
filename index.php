@@ -9,7 +9,6 @@
   <body>
   <input type="text" name="isim" id="isim" placeholder="bir şeyler yaz">
   <i id="gonder">Gönder</i>
-  <span id="sonuc"></span>
   <script>
   $('#gonder').click(function(){//göndere tıklanma olayı
   	/* burdan sonrası göndere bastıktan yapılacak işlemler*/
@@ -20,7 +19,7 @@
   		url:'ajaxPost.php', // post edilecek adres
   		data:post_edilecek_veriler, //post edilecek veriler
   		success:function(cevap){// işlem başarılıysa
-  			$("#sonuc").html(cevap); //sonuc id'sine ajaxPost.php den dönen verileri basıyoruz. 
+  			alert(cevap); //sonuc id'sine ajaxPost.php den dönen verileri basıyoruz. 
   		}
   	});
   });
